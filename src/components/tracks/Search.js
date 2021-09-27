@@ -12,7 +12,7 @@ class Search extends Component {
 
     axios
       .get(
-        `https://api.musixmatch.com/ws/1.1/track.search?q_track=${this.state.trackTitle}&page_size=12&page=1&s_track_rating=desc&apikey=${process.env.REACT_APP_MM_KEY}`
+        `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?q_track=${this.state.trackTitle}&page_size=12&page=1&s_track_rating=desc&apikey=${process.env.REACT_APP_MM_KEY}`
       )
       .then((res) => {
         dispatch({
